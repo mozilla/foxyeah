@@ -1,0 +1,236 @@
+/*------------------------------------*\
+    Tiles
+\*------------------------------------*/
+
+
+// Wrap the whole thing for padding, doesn't work if set on .tiles
+.tiles-container {
+  padding: 0 8px;
+  margin-bottom: 80px;
+  .modal--open & {
+    overflow: hidden;
+  }
+  .touchevents .modal--open & {
+      position:fixed;
+      width:100%;
+  }
+
+  @include bp(bp-xl) {
+    padding: 0;
+  }
+}
+
+
+// The main tiles, yo!
+.tiles {
+  max-width: $inner-container-width + 16; // cheat the container to align w/ padding ;)
+  margin: 0 auto;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+
+// An individual tile
+.tiles__item {
+  border: 8px solid rgba(0,0,0,0);
+  width: 100%;
+  cursor: pointer;
+  overflow:hidden;
+
+  @include bp(bp-sm) {
+    width: 50%;
+  }
+
+  @include bp(bp-lg) {
+    width: 33.33333%;
+  }
+
+  @include bp(bp-xl) {
+   width: 25%;
+  }
+
+  &:hover {
+    > .details {
+      > .share--tile {
+        left: 0;
+      }
+
+      .details__title {
+        left: -100%;
+        i {
+          opacity:0;
+        }
+      }
+
+      .share__count {
+        opacity: 1;
+
+      }
+    }
+    .inspiration {
+      transition-delay: 200ms;
+      transform: translateY(100%);
+    }
+  }
+
+}
+
+
+// Tile details (orange bar below tile)
+.details {
+  position: relative;
+  background: $color-orange;
+  color: $color-white;
+  height: 64px;
+  overflow: hidden;
+  line-height: 64px;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: default;
+
+  .share__item {
+    margin-right: 12px;
+  }
+}
+
+
+.details__title {
+  display: none;
+}
+
+// .details__title {
+//   position: relative;
+//   transition: left 250ms;
+//   left: 0;
+//   margin-right: -28px;
+//   padding: 23px 57px 20px 20px;
+//   width: 100%;
+//   line-height: 17px;
+//   .svg & {
+//      @include transform(translateY(-50%));
+//     top:50%;
+//   }
+
+
+//   i {
+//     @include transition(opacity .2s ease-in-out);
+//     opacity:1;
+//     display:inline-block;
+//     height:13px;
+//     width:10px;
+//     background-image:url('./images/share-icon@2x.png');
+//     background-size: 13px 10px;
+//     background-position:center center;
+//     background-repeat:no-repeat;
+//     padding: 18px;
+//     border: 1px solid white;
+//     border-radius: 20px;
+//     position: absolute;
+//     right: 13px;
+//     top: 17px;
+//     &:hover, &:active, &:focus {
+//       background-color:rgba(255,255,255,.6);
+//     }
+//     // newer browsers
+//     .svg & {
+//       top:50%;
+//       @include transform(translateY(-50%));
+//     }
+//   }
+// }
+
+
+.share--tile {
+  position: absolute;
+  top: 0;
+  // left: 100%;
+  left: 0;
+  width:100%;
+  transition: left 250ms $ease-out-sine;
+  span {
+    float:right;
+  }
+  li {
+    float:right;
+    &:focus {
+      background-color:white(.6);
+    }
+  }
+}
+
+
+.share__count {
+  display: inline-block;
+  float: left;
+  direction: rtl;
+  position: relative;
+  left: 14px;
+  // opacity: 0;
+  top: -11px;
+  margin-right: 30px;
+  transition: all 150ms ease-in;
+  transition-delay: 100ms;
+}
+
+
+// Inspiration
+.inspiration {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  color: $color-white;
+  padding: 16px;
+  font-weight: 300;
+  font-style: italic;
+  background-color: rgba($color-black, 0.8);
+  transition: transform .25s $ease-in-out-sine;
+}
+
+
+// Video tile play
+.play {
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -20px;
+  @include hide-text;
+  transition: all 250ms;
+  cursor: pointer;
+  background: url('images/play-icon.png');
+
+  @include retina {
+    background: url('images/play-icon@2x.png');
+    background-size: 40px;
+  }
+
+  .svg & {
+   background: url('images/play-icon.svg');
+    background-size: 40px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+
+.load-more {
+  // background: pink;
+  height: 100px;
+  text-align: center;
+  line-height: 80px;
+  .modal--open & {
+    opacity:0;
+  }
+  span {
+    color: $color-orange;
+    border: 3px solid $color-orange;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+}

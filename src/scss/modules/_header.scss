@@ -1,0 +1,503 @@
+/*------------------------------------*\
+    Header
+\*------------------------------------*/
+
+
+// entire header element
+.header {
+  position: relative;
+  width: 100%;
+  height: 168px;
+  overflow: hidden;
+  color: $color-white;
+
+  &.mobile {
+    background: url('images/mobile-header.jpg');
+    @include bp(bp-sm) {
+      background: transparent;
+    }
+  }
+
+  &.menu--open {
+    height: auto;
+    clear: both;
+    background: $color-orange;
+  }
+
+  @include bp(bp-lg) {
+    height: 256px;
+  }
+}
+
+
+// Styles for when it's fixed (after scroll)
+.header--sticky {
+  height: 0px;
+  background: rgba($color-orange, 0.9);
+  top: 0;
+
+  position: fixed;
+  z-index: 100;
+  transition: height 250ms;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 18px;
+    left: 28px;
+    display: inline-block;
+    cursor: pointer;
+    width: 113px;
+    height: 27px;
+
+    background: url('images/foxyeah-mobile-logo.png') no-repeat center center;
+
+    @include retina {
+      background: url('images/foxyeah-mobile-logo@2x.png') no-repeat center center;
+      background-size: 113px 27px;
+    }
+
+    // .svg & {
+    //   background-size: 100%;
+    // }
+  }
+}
+
+
+.stuck {
+  height: 64px;
+}
+
+.grid-wrapper {
+  position:absolute;
+  z-index:-1;
+  width:2560px;
+  height:256px;
+  margin-left: -1280px;
+  top:0;
+  left:50%;
+  padding-left:0px;
+  background-position:5px 0;
+  &.grid1 { background-image:url(./images/avatar-grid/desktop/grid-desktop1.jpg); }
+  &.grid2 { background-image:url(./images/avatar-grid/desktop/grid-desktop2.jpg); }
+  &.grid3 { background-image:url(./images/avatar-grid/desktop/grid-desktop3.jpg); }
+
+  @include hidpi(2) {
+    background-size:contain;
+    background-position:8px 0;
+    &.grid1 { background-image:url(./images/avatar-grid/desktop/grid-desktop1@2x.jpg); }
+    &.grid2 { background-image:url(./images/avatar-grid/desktop/grid-desktop2@2x.jpg); }
+    &.grid3 { background-image:url(./images/avatar-grid/desktop/grid-desktop3@2x.jpg); }
+  }
+  img {
+      width:100%;
+      position:absolute;
+      top:0;
+      left:5px;
+    &.mobile {
+      display:none;
+    }
+    &.desktop {
+      display:none;
+    }
+  }
+  .tile-grid {
+    position:absolute;
+    top:0;
+    left:16px;
+    &.active {
+      li {
+        opacity:0;
+      }
+    }
+    li {
+      list-style:none;
+      width:64px;
+      height:64px;
+      float:left;
+      white-space: nowrap;
+      opacity:1;
+      @include transition(opacity 1s $ease-out-quad);
+      background-color:white;
+      // Elements
+      $elements: 180;
+      @for $i from 0 to $elements {
+        // background-color:rgb(random($elements), 0,0);
+
+        &:nth-child(#{$i}) {
+
+          @include transition-delay((random($elements) * .007s));
+        }
+      }
+    }
+  }
+  @include media(max-width 1024px) {
+    &.grid1 { background-image:url(./images/avatar-grid/mobile/grid-mobile1.jpg); }
+    &.grid2 { background-image:url(./images/avatar-grid/mobile/grid-mobile2.jpg); }
+    &.grid3 { background-image:url(./images/avatar-grid/mobile/grid-mobile3.jpg); }
+
+    @include hidpi(2) {
+      &.grid1 { background-image:url(./images/avatar-grid/mobile/grid-mobile1@2x.jpg); }
+      &.grid2 { background-image:url(./images/avatar-grid/mobile/grid-mobile2@2x.jpg); }
+      &.grid3 { background-image:url(./images/avatar-grid/mobile/grid-mobile3@2x.jpg); }
+    }
+
+    background-size:contain;
+    background-position:16px 0;
+    width:1064px;
+    height:168px;
+    margin-left:-532px;
+    .tile-grid {
+      //left:5px;
+      li {
+        height:56px;
+        width:56px;
+      }
+    }
+
+  }
+}
+
+
+// <ul> container for all avatars
+// .avatars {
+//   position: absolute;
+//   opacity: 1;
+//   width: $avatars-width;
+//   height: 168px;
+//   top: 0;
+//   left: 50%;
+//   margin-left: -#{$avatars-width / 2};
+//   z-index: -1;
+//   overflow: hidden;
+
+//   @include bp(bp-lg) {
+//     height: 256px;
+//   }
+// }
+
+
+// // <li> avatar item
+// .avatar__item {
+//   list-style: none;
+//   width: 56px;
+//   height: 56px;
+//   float: left;
+//   white-space: nowrap;
+//   opacity: 1;
+
+//   img {
+
+//     opacity: 0;
+//     transition: opacity .6s $ease-out-quad;
+//   }
+
+//   $elements: 180;
+//   @for $i from 0 to $elements {
+//     &:nth-child(#{$i}) {
+//        img {
+//         @include transition-delay((random($elements) * .005s));
+//        }
+//     }
+//   }
+//   @include bp(bp-lg) {
+//     width: 64px;
+//     height: 64px;
+//   }
+// }
+
+// Container for "FoxYeah  & A Firefox Community Initiative"
+.lockup {
+  background: $color-orange;
+  display: inline-block;
+  width: 168px;
+  height: 56px;
+  text-align: center;
+
+  @include bp(bp-lg) {
+    width: 256px;
+    height: 128px;
+  }
+}
+
+// FoxYeah Logo
+h1 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  @include hide-text;
+  background: url('images/foxyeah-mobile-logo.png') no-repeat center center;
+
+  @include retina {
+    background: url('images/foxyeah-mobile-logo@2x.png') no-repeat center center;
+    background-size: 113px 27px;
+  }
+
+  @include bp(bp-lg) {
+    background: url('images/foxyeah-logo.png') no-repeat center bottom;
+    height: 70px;
+    margin-top: 3px;
+
+    @include retina {
+      background: url('images/foxyeah-logo@2x.png') no-repeat center bottom;
+      background-size: 184px 44px;
+    }
+  }
+}
+
+
+// "A Firefox Community Initiative"
+h2 {
+  display: none;
+
+  @include bp(bp-lg) {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+
+// menu icon, only for mobile/tablet
+.menu {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  z-index: 100;
+  @include hide-text;
+  top: 0;
+  right: 0;
+  transition: right 250ms;
+  cursor: pointer;
+
+  // background: $color-orange url('images/menu-icon.png') no-repeat center center;
+
+  // @include retina {
+  //   background: $color-orange url('images/menu-icon@2x.png') no-repeat center center;
+  //   background-size: 18px 12px;
+  // }
+
+  .svg & {
+    background: $color-orange url('images/menu-icon.svg') no-repeat center center;
+    background-size: 22px 22px;
+  }
+
+  &.menu--open {
+    background-image: url('images/close-icon.png');
+
+    @include retina {
+      background-image: url('images/close-icon@2x.png');
+      background-size: 14px 14px;
+    }
+
+    .svg & {
+      background-image: url('images/close-icon.svg');
+      background-size:14px 14px;
+    }
+
+  }
+
+  @include bp(bp-md) {
+    display: none;
+    width: 64px;
+    height: 64px;
+  }
+
+  .header--sticky & {
+    background-color: transparent;
+    margin-top: 4px;
+    border: 2px solid red;
+    display: none;
+  }
+}
+
+
+// copy block inside header - "Know someone who needs..."
+.intro__copy {
+  color: $color-white;
+  display: none;
+  position: absolute;
+
+}
+
+.copy--main {
+  background: $color-orange;
+  width: 168px;
+  height: 112px;
+  top: 56px;
+  right: 56px;
+  font-weight: 300;
+  font-size: 13px;
+  padding: 10px;
+
+  &.menu--open {
+    margin: 0;
+    position: relative;
+    top: -6px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 26px;
+    padding-right: 26px;
+
+    @include bp(bp-sm) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  // @include bp(bp-sm) {
+  //   display: block;
+  // }
+
+  @include bp(bp-md) {
+    display: block;
+    width: 336px;
+    height: 112px;
+    top: 56px;
+    left: 168px;
+    font-size: 16px;
+    line-height:26px;
+    padding: 20px;
+  }
+
+  @include bp(bp-lg) {
+    display: block;
+    width: 320px;
+    height: 168px;
+    top: 128px;
+    left: 256px;
+    font-size: 18px;
+    line-height:26px;
+    padding: 12px 14px 0 20px;
+
+    @include retina {
+      width: 321px;
+    }
+  }
+}
+
+.copy--sticky {
+  // width: px;
+  font-weight: 200;
+
+  @include bp(bp-sm) {
+    top: 12px;
+    font-size: 14px;
+    display: inline-block;
+    left: 180px;
+  }
+
+  @include bp(bp-md) {
+    top: 10px;
+    font-size: 16px;
+    left: 240px;
+  }
+}
+
+
+// Share icons in header
+ul.share--header {
+  background: $color-orange;
+  height: 64px;
+  position: absolute;
+  top: 0;
+  left: 576px; // move back to 512px when SharedCount reaches 1,000+?
+  opacity: 0;
+  li {
+    &:first-child {
+      margin-right: 16px;
+    }
+    &:last-child {
+      margin-right:0;
+    }
+  }
+
+  &.menu--open {
+    position: relative;
+    top: -5px;
+    left: 8px;
+    opacity: 1;
+
+    @include bp(bp-sm) {
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+  }
+
+  @include bp(bp-md) {
+    opacity: 1;
+    height: 56px;
+    width: auto;
+    margin-left: -8px;
+    li {
+      height: 32px;
+      width: 32px;
+    }
+    opacity: 1;
+  }
+
+  @include bp(bp-lg) {
+    width: 192px;
+    height: 64px;
+    margin-left: 0px;
+
+    li {
+      height: 40px;
+      width: 40px;
+    }
+
+    @include retina {
+      width: 193px;
+    }
+  }
+
+  .zoom {
+    display: none;
+  }
+}
+
+
+// Mentions block in header
+.mentions {
+  background: $color-orange;
+  display: inline-block;
+  position: absolute;
+  top: -300px;
+  // left: -300px;
+
+  &.hidden {
+    display: none;
+  }
+
+  span {
+    font-size: 27px;
+    font-weight: 200;
+    position: relative;
+    top: 5px;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;
+      margin: 0;
+  }
+
+  @include bp(bp-lg) {
+    top: 128px;
+    left: 768px;
+    width: 256px;
+    height: 64px;
+    text-align: center;
+    display: block;
+
+    @include retina {
+      width: 257px;
+    }
+  }
+}

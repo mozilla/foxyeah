@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    Base
+\*------------------------------------*/
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Fira Sans';
+  font-size: 16px;
+  font-weight:300;
+  margin: 0 0 60px;
+  //-webkit-font-smoothing:antialiased;
+
+  // Media Query helper, comment out to remove
+  // &::before {
+  //   content: 'base';
+  //   position: fixed;
+  //   z-index: 9999;
+  //   font-size: 12px;
+  //   padding: 10px;
+  //   background: rgba($color-white, 0.5);
+  //   font-weight: 700;
+
+  //   @include bp(bp-sm) { content: 'bp-sm' }
+  //   @include bp(bp-md) { content: 'bp-md' }
+  //   @include bp(bp-lg) { content: 'bp-lg' }
+  //   @include bp(bp-xl) { content: 'bp-xl' }
+  // }
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+
+li {
+  list-style: none;
+}
+
+
+// wrapper class for elements that don't span 100%
+.inner {
+  position: relative;
+  max-width: $inner-container-width;
+  margin: 0 auto;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+label {
+  display: block;
+  font-weight: 400;
+
+  span {
+    font-weight: 300;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 2px;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+  border: 1px solid $color-darkgray;
+  border-radius: 0;
+}
+
+textarea {
+  width: 100% !important;
+  height: 100px;
+  max-width: 360px;
+  max-height: 200px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+input[type=submit] {
+  outline: none;
+  border: none;
+}
+
+input[disabled=disabled][type=submit] {
+  opacity: 0.5;
+}
+
+input[type=text],
+input[type=email] {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  -webkit-appearance: none;
+}
+
+.hidden {
+  display: none;
+}

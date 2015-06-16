@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    Buttons
+\*------------------------------------*/
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+.button--white {
+  background: $color-white;
+  color: $color-orange;
+}
+
+
+.button--cancel {
+  background: $color-white;
+  color: #878787; // one off
+  &:hover {
+	background: $color-darkgray;
+  }
+}
+
+
+.button--send {
+  background: $color-orange;
+  color: $color-white;
+  &:hover {
+  	background: $color-orange-dark;
+  }
+}

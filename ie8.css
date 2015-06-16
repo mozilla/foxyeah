@@ -1,0 +1,83 @@
+body {
+  /*background: red;*/
+}
+
+.tiles {
+  width: 1264px;
+  margin-top: 16px;
+}
+
+.tiles__item {
+  width: 300px;
+}
+
+.share__item,
+.details__title i {
+  border: none !important;
+}
+
+.share__item +
+.share__item +
+.share__item {
+  margin-right: 0;
+}
+
+.share--header {
+  left: 600px;
+}
+
+.header--sticky {
+  display: none;
+}
+
+.header {
+  background: url('images/ie8-grid.jpg');
+  height: 248px;
+}
+
+.filters {
+  font-size: 20px;
+  text-align: left;
+}
+
+h1 {
+  background: url('images/foxyeah-logo.png') no-repeat center center;
+  width: 256px;
+  height: 126px;
+  background-color: #FF6B0B;
+  text-indent: -9999px;
+}
+
+.filters {
+  display: none;
+}
+
+.copy--main {
+  display: block;
+  width: 320px;
+  height: 122px;
+  top: 126px;
+  left: 256px;
+  font-size: 17px;
+  line-height:26px;
+  padding: 12px 14px 0 20px;
+  background-color: #FF6B0B;
+}
+
+.mentions {
+  color: #fff;
+  background: #FF6B0B;
+  display: inline-block;
+  position: absolute;
+  top: 126px;
+  left: 768px;
+  width: 256px;
+  height: 63px;
+  text-align: center;
+}
+
+.modal {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000,endColorstr=#90000000);
+  zoom: 1;
+}

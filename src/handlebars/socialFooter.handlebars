@@ -1,0 +1,17 @@
+<div class="details">
+  <p class="details__title">{{description}} <i></i></p>
+  <ul data-id={{ID}} class="share share--tile" data-bitly={{bitly}}>
+    <li class="share__item">
+      <a class="icon icon--email" href="">Share via Email</a>
+    </li>
+    <li class="share__item">
+      <a class="icon icon--twitter" href="{{permalink}}">share on Twitter</a>
+    </li>
+    <li class="share__item">
+      <a class="icon icon--facebook" href="{{permalink}}">share on Facebook</a>
+    </li>
+
+   {{#if popularity}} <span class="share__count" id="share{{ID}}">{{popularity}}</span>{{/if}}
+
+  </ul>
+</div>

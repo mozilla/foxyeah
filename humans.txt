@@ -1,0 +1,10 @@
+/* Foxyeah Theme Developers */
+	Frontend/backend: Charlie Hield
+	Twitter: @charliehield
+	From: Minneapolis, MN
+
+	Frontend/backend: Kevin Truckenmiller
+	Twitter: @kevintruck
+	From: Minneapolis, MN 
+
+	Concepted by Mono - mono-1.com

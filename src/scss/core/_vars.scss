@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    Vars
+\*------------------------------------*/
+
+// Colors
+$color-white          : #fff;
+$color-lightgray      : #F4F5F6;
+$color-darkgray       : #C1C1C1;
+$color-gray-hover	  : rgb(225,225,225);
+$color-black          : #000;
+$color-orange         : #FF6B0B;
+$color-orange-light	  :rgb(233, 164, 105);
+$color-orange-dark	  :rgb(225,107,26);
+
+// Breakpoints
+$bp-sm                : 568px;
+$bp-md                : 768px;
+$bp-lg                : 1024px;
+$bp-xl                : 1280px;
+
+
+// KT breakpoints
+$mobile: max-width 767px;
+$tablet: min-width 768px;
+$desktop: min-width 1024px;
+$l_desktop: min-width 1240px;
+
+// Globals
+$avatars-width          : 2656px; // magic number to line up avatars & .inner container
+$inner-container-width  : 1248px;

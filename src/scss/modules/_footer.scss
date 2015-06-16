@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    Footer
+\*------------------------------------*/
+
+
+// footer
+.footer {
+  // height: 124px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  background: $color-orange;
+  color: $color-white;
+  font-weight: 300;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  // height: 100px;
+  width: 100%;
+
+  a {
+    color: $color-white;
+    font-weight: 400;
+  }
+}

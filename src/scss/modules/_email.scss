@@ -1,0 +1,114 @@
+/*------------------------------------*\
+    Email
+\*------------------------------------*/
+
+
+.modal--email {
+  background: $color-white;
+  max-width: 800px;
+  margin: 0 auto;
+  @include clearfix;
+
+  .button {
+    padding: 4px 8px;
+    margin-left: 5px;
+  }
+
+  fieldset {
+    margin-bottom: 20px;
+  }
+}
+
+
+.email__section {
+  overflow: hidden;
+  padding: 20px;
+
+  @include bp(bp-md) {
+    width: 50%;
+    float: left;
+
+    &:nth-child(1) {
+      padding-right: 0;
+    }
+  }
+}
+
+
+.email__actions {
+  background: $color-lightgray;
+  width: 100%;
+  display: block;
+  clear: both;
+  padding: 10px;
+  text-align: right;
+  float: right;
+  clear: both;
+  position: relative;
+}
+
+
+.email__heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.form__response {
+  // display: none;
+}
+
+
+.g-recaptcha {
+  max-width: 100% !important;
+  width: 100% !important;
+  // overflow: scroll;
+  // width: 50px !important;
+  // border: 1px solid green;
+}
+
+
+#rc-imageselect {
+  border: 5px solid green !important;
+}
+
+
+.terms {
+  float: left;
+  font-size: 10px;
+  color: $color-darkgray;
+  width: 40%;
+  text-align: left;
+
+  @include bp(bp-sm) {
+    width: 60%;
+    font-size: 12px;
+  }
+
+  @include bp(bp-md) {
+    position: relative;
+    top: 8px;
+  }
+
+  a {
+    color: $color-darkgray;
+  }
+}
+
+
+.cc {
+  display: none;
+}
+
+.spinner {
+  position: absolute;
+  top: -22px;
+  // right: 20px;
+  right: 50%;
+  // display: none;
+
+  @include bp(bp-sm) {
+    top: 26px;
+    right: 160px;
+  }
+}

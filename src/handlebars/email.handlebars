@@ -1,0 +1,49 @@
+
+<div class="modal--email">
+  <form data-parsley-validate id="email-form">
+    <div class="email__section">
+      {{!-- <img src="{{image.url}}" alt=""> --}}
+      <div class="figure figure--email" style="background-image: url({{image.url}});"></div>
+      {{!-- <p class="email__heading">{{title}}</p> --}}
+    </div>
+    <div class="email__section">
+      <fieldset>
+        <label for="from">From <span>(Your Name)</span></label>
+        <input type="text" id="from" name="from" data-parsley-required="true" data-parsley-maxlength="50">
+      </fieldset>
+      <fieldset>
+        <label for="to">Send to <span>(Email)</span></label>
+        <input type="email" id="to" name="to" data-parsley-required="true" data-parsley-type="email" data-parsley-maxlength="50">
+      </fieldset>
+      <fieldset>
+        <label for="subject">Subject</label>
+        <p class="preview">{{email_subject}}</p>
+        {{!-- <input type="text" id="subject" name="subject" data-parsley-required="true" data-parsley-maxlength="50" value="{{email_subject}}"> --}}
+      </fieldset>
+      <fieldset>
+        <label for="body">Body</label>
+        <p class="preview">{{breaklines email_body}}</p>
+        {{!-- <textarea id="body" name="body" data-parsley-required="true" data-parsley-maxlength="400">{{email_body}}</textarea> --}}
+      </fieldset>
+      <div class="form__response"></div>
+      <input type="hidden" name="id" value="{{ID}}">
+      {{!-- <fieldset class="check">
+        <label><input type="checkbox" /> I would like to receive a copy of this email.</label>
+      </fieldset>
+      <fieldset class="cc">
+        <label for="sender">Your Email</label>
+        <input type="email" id="sender">
+      </fieldset> --}}
+    </div>
+    <div class="email__actions">
+      <p class="terms">
+        Email services provided by Mandrill. To learn more, check their <a href="https://mandrill.com/privacy/" target="_blank">privacy policy</a>.
+      </p>
+      {{!-- <a class="terms" href="https://mandrill.com/terms/" target="_blank"></a> --}}
+      <span id="spinner" class="spinner"></span>
+      <input type="submit" class="button button--send" value="Send" />
+      {{!-- <a class="button button--send" href="">Send</a> --}}
+      <a class="button button--cancel" href="">Cancel</a>
+    </div>
+  </form>
+</div>

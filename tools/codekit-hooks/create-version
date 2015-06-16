@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Define a timestamp function
+timestamp() {
+  date +"%s"
+}
+
+
+printf "<?php \$version = $(timestamp); ?>\n" > ../../version.php

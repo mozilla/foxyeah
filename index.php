@@ -113,14 +113,14 @@ $privacy = get_posts(array(
 
   $sort_object = get_field_object('default_sort_type', 'option');
   $default_sort_type = get_field('default_sort_type', 'option');
-  if(empty($default_sort_type)) { 
+  if(empty($default_sort_type)) {
       $default_sort_type = "Featured";
-  } 
+  }
 ?>
 <div class="filters inner">
   <p>
   Share a foxy reason to download Firefox. <br class="filters--break">
-  View <a class="filter__action" href=""><?php echo the_field('default_sort_type', 'option'); ?></a> invites first.</p>
+  View <a class="filter__action" href=""><?php echo the_field('default_sort_type', 'option'); ?></a> first.</p>
   <ul class="filter__options">
     <?php foreach($sort_object['choices'] as $key => $value): ?>
     <? if ($value !== $default_sort_type): ?>
@@ -166,7 +166,7 @@ $privacy = get_posts(array(
   var all_posts = <?php echo json_encode($all_posts); ?>;
 
   var default_sort_type = <?php echo json_encode($default_sort_type); ?>;
-  <?php 
+  <?php
   // Pagination Count
   $pagination_count = get_field('pagination_count', 'option');
   if(empty($pagination_count)) {

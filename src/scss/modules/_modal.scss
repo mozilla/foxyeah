@@ -271,6 +271,10 @@ footer + div {
       left:auto;
       width:auto;
       padding-bottom:0;
+
+      .share__item {
+        margin-right: 8px;
+      }
     }
     li {
       display:inline-block;
@@ -284,7 +288,7 @@ footer + div {
     background-color:$color-orange;
     a {
       color:white;
-      
+
     }
     ul {
 

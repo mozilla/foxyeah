@@ -282,7 +282,10 @@ footer + div {
   }
   .social {
     background-color:$color-orange;
-
+    a {
+      color:white;
+      
+    }
     ul {
 
       li {

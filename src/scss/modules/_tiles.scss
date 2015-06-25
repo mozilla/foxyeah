@@ -73,10 +73,7 @@
     .inspiration {
       @include transition-delay(200ms);
       @include transform(translateY(100%));
-      a {
-        color:$color-orange;
-        text-decoration: none;
-      }
+
     }
   }
 
@@ -177,8 +174,8 @@
   opacity: 1;
   top: -11px;
   margin-right: 30px;
-  transition: all 150ms ease-in;
-  transition-delay: 100ms;
+  @include transition(all 150ms ease-in);
+  @include transition-delay(100ms);
 }
 
 
@@ -192,7 +189,11 @@
   font-weight: 300;
   font-style: italic;
   background-color: rgba($color-black, 0.8);
-  transition: transform .25s $ease-in-out-sine;
+  @include transition(transform .25s $ease-in-out-sine);
+  a {
+    color:$color-orange;
+    text-decoration: none;
+  }
 }
 
 

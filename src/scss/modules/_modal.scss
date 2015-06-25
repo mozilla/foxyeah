@@ -202,7 +202,7 @@ footer + div {
     &.share--tile {
       left:auto;
       width:auto;
-      padding-bottom:19px;
+      padding-bottom:0;
     }
     li {
       display:inline-block;
@@ -214,11 +214,27 @@ footer + div {
   }
   .social {
     background-color:$color-orange;
+    
+    ul {
+      
+      li {
+        &:first-child {
+            position: relative;
+            top: -10px;
+        }
+        strong {
+            color: white;
+            font-size: 26px;
+            font-weight: 400;
+            margin-right: 14px;
+        }
+      }
+    }
     p {
       color:white;
-      padding-top:20px;
-      padding: 20px 8px 4px 8px;
+      padding:0 0 20px 0;
     }
+
   }
 
   // opacity: 0.7;

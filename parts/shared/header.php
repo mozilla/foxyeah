@@ -43,7 +43,7 @@
       <h1>FoxYeah</h1>
       <span class="menu">menu</span>
       <div class="intro__copy copy--sticky">
-        <p>Know someone who needs to download Firefox? <br> #FoxYeah you do! Go ahead, send them a personal invite below.</p>
+        <p>Love Firefox? Share Firefox.</p>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
       <img class="zoom" src="{{image.tile}}" alt="{{title}}" />
     {{/if}}
     {{#if inspired_by_name}}
-      <p class="inspiration">Created by {{{inspired_by_name}}} in {{inspired_by_location}}</p>
+      <p class="inspiration">Created by {{{inspired_by_name}}}{{#if inspired_by_location}}in {{inspired_by_location}}{{/if}}</p>
     {{/if}}
     {{#if description}}
       {{> socialFooter}}

@@ -1,0 +1,5 @@
+#exclude these directories
+bower_components
+.codekit-cache
+.sass-cache
+.DS_Store

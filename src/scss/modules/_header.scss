@@ -384,16 +384,17 @@ h2 {
   font-weight: 200;
 
   @include bp(bp-sm) {
-    top: 12px;
-    font-size: 14px;
+    top: 23px;
+    font-size: 16px;
     display: inline-block;
     left: 180px;
   }
 
   @include bp(bp-md) {
-    top: 10px;
-    font-size: 16px;
+    top: 17px;
+    font-size: 23px;
     left: 240px;
+    font-weight: 300;
   }
 }
 

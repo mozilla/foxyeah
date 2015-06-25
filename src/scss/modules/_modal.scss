@@ -11,7 +11,7 @@
   left: 0; right: 0;
   top: 0; bottom: 0;
   z-index: 990;
-  background: rgba($color-black, 0.85);
+  background: rgba($color-black, 0.55);
   -webkit-overflow-scrolling: touch;
 
   h3 {
@@ -270,7 +270,7 @@ footer + div {
     &.share--tile {
       left:auto;
       width:auto;
-      padding-bottom:19px;
+      padding-bottom:0;
     }
     li {
       display:inline-block;
@@ -282,11 +282,29 @@ footer + div {
   }
   .social {
     background-color:$color-orange;
+    
+    ul {
+      
+      li {
+        &:first-child {
+            position: relative;
+            top: -10px;
+        }
+        strong {
+            color: white;
+            font-size: 26px;
+            font-weight: 400;
+            margin-right: 14px;
+        }
+      }
+    }
     p {
       color:white;
-      padding-top:20px;
-      padding: 20px 8px 4px 8px;
+      max-width:600px;
+      margin:0 auto;
+      padding:0 18px 20px 18px;
     }
+
   }
 
   // opacity: 0.7;

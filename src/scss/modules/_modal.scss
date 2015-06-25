@@ -85,7 +85,7 @@
   padding: 20px;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  @include vertical-align;
 
   @include bp(bp-sm) {
     max-width: 450px;
@@ -282,9 +282,9 @@ footer + div {
   }
   .social {
     background-color:$color-orange;
-    
+
     ul {
-      
+
       li {
         &:first-child {
             position: relative;

@@ -430,4 +430,20 @@ $(document).ready(function($) {
     }
   });
 
+  /* Welcome Banner */
+  var $modalWelcome = $('.modal--welcome');
+  var $welcomeBanner = $('.welcome-banner');
+  var hasSeenWelcome = localStorage.getItem('welcome');
+
+  if (!hasSeenWelcome) {
+    $modalWelcome.css('display', 'block');
+  }
+
+  $welcomeBanner.on('click', function() {
+    modal.close();
+    if (!hasSeenWelcome) {
+      localStorage.setItem('welcome', true);
+    }
+  });
+
 });

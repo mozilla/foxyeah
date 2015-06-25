@@ -77,6 +77,74 @@
 }
 
 
+.welcome-banner {
+  text-align: center;
+  color: $color-white;
+  background: $color-orange;
+  margin: 0 20px;
+  padding: 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include bp(bp-sm) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  @include bp(bp-lg) {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 22px;
+
+    h1 {
+      margin-top: -22px;
+    }
+  }
+
+  p {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 25px 0;
+
+    @include bp(bp-lg) {
+      max-width: 450px;
+      padding: 40px 0 35px 0;
+    }
+  }
+
+  .button--pill {
+    font-size: 18px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    font-weight: 400;
+    cursor: pointer;
+
+    @include bp(bp-lg) {
+      font-size: 28px;
+      border-radius: 30px;
+      padding: 8px 32px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .icon--close {
+    border: none;
+    // background: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0.8;
+
+    @include bp(bp-lg) {
+      background-size: 24px;
+      top: 3px;
+    }
+  }
+}
+
+
 //prevent scroll when modal is open
 body.modal--open {
   .tiles-container {

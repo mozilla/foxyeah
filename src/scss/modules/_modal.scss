@@ -232,7 +232,9 @@ footer + div {
     }
     p {
       color:white;
-      padding:0 0 20px 0;
+      max-width:600px;
+      margin:0 auto;
+      padding:0 18px 20px 18px;
     }
 
   }

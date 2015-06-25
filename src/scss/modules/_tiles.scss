@@ -71,8 +71,12 @@
       }
     }
     .inspiration {
-      transition-delay: 200ms;
-      transform: translateY(100%);
+      @include transition-delay(200ms);
+      @include transform(translateY(100%));
+      a {
+        color:$color-orange;
+        text-decoration: none;
+      }
     }
   }
 

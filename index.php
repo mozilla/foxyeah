@@ -142,14 +142,16 @@ $privacy = get_posts(array(
   <span>Load more</span>
 </div>
 
+<?php /* Hide the modal for now
 <div class="modal modal--welcome">
   <div class="welcome-banner">
     <span class="icon icon--close">close</span>
     WELCOME TO <h1>FoxYeah</h1>
-    <p>Did you know 1 out of 2 of your friends will download Firefox if you just as them?</p>
+    <p>Did you know 1 out of 2 of your friends will download Firefox if you just ask them?</p>
     <span class="button button--pill">Start Sharing</span>
   </div>
 </div>
+*/ ?>
 
 <!-- Put these libraries into minification up front -->
 <script>

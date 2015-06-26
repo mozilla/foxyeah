@@ -157,6 +157,7 @@
   cursor: pointer;
   // z-index: 1001;
   z-index: 2147483647;
+  opacity: 0.8;
 
   @include bp(bp-md) {
     width: 56px;

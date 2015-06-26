@@ -11,7 +11,7 @@
   left: 0; right: 0;
   top: 0; bottom: 0;
   z-index: 990;
-  background: rgba($color-black, 0.85);
+  background: rgba($color-black, 0.55);
   -webkit-overflow-scrolling: touch;
 
   h3 {
@@ -74,6 +74,74 @@
   position: relative;
   margin-top: 70px !important;
   margin-bottom: 30px !important;
+}
+
+
+.welcome-banner {
+  text-align: center;
+  color: $color-white;
+  background: $color-orange;
+  margin: 0 20px;
+  padding: 20px;
+  position: relative;
+  top: 50%;
+  @include vertical-align;
+
+  @include bp(bp-sm) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  @include bp(bp-lg) {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 22px;
+
+    h1 {
+      margin-top: -22px;
+    }
+  }
+
+  p {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 25px 0;
+
+    @include bp(bp-lg) {
+      max-width: 450px;
+      padding: 40px 0 35px 0;
+    }
+  }
+
+  .button--pill {
+    font-size: 18px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    font-weight: 400;
+    cursor: pointer;
+
+    @include bp(bp-lg) {
+      font-size: 28px;
+      border-radius: 30px;
+      padding: 8px 32px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .icon--close {
+    border: none;
+    // background: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0.8;
+
+    @include bp(bp-lg) {
+      background-size: 24px;
+      top: 3px;
+    }
+  }
 }
 
 
@@ -202,7 +270,11 @@ footer + div {
     &.share--tile {
       left:auto;
       width:auto;
-      padding-bottom:19px;
+      padding-bottom:0;
+
+      .share__item {
+        margin-right: 8px;
+      }
     }
     li {
       display:inline-block;
@@ -214,11 +286,34 @@ footer + div {
   }
   .social {
     background-color:$color-orange;
+    a {
+      color:white;
+
+    }
+    ul {
+
+      li {
+        &:first-child {
+          margin-top: 16px;
+          float: left;
+          padding-bottom: 20px;
+
+        }
+        strong {
+            color: white;
+            font-size: 26px;
+            font-weight: 400;
+            margin-right: 20px;
+        }
+      }
+    }
     p {
       color:white;
-      padding-top:20px;
-      padding: 20px 8px 4px 8px;
+      max-width:600px;
+      margin:0 auto;
+      padding:0 18px 20px 18px;
     }
+
   }
 
   // opacity: 0.7;

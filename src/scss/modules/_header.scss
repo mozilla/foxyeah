@@ -330,7 +330,6 @@ h2 {
   top: 56px;
   right: 56px;
   font-weight: 300;
-  font-size: 13px;
   padding: 10px;
 
   &.menu--open {
@@ -360,9 +359,9 @@ h2 {
     height: 112px;
     top: 56px;
     left: 168px;
-    font-size: 16px;
-    line-height:26px;
-    padding: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 18px 18px 20px 22px;
   }
 
   @include bp(bp-lg) {
@@ -371,9 +370,8 @@ h2 {
     height: 168px;
     top: 128px;
     left: 256px;
-    font-size: 18px;
-    line-height:26px;
-    padding: 12px 14px 0 20px;
+    font-size: 20px;
+    padding: 25px 22px;
 
     @include retina {
       width: 321px;
@@ -386,16 +384,17 @@ h2 {
   font-weight: 200;
 
   @include bp(bp-sm) {
-    top: 12px;
-    font-size: 14px;
+    top: 23px;
+    font-size: 16px;
     display: inline-block;
     left: 180px;
   }
 
   @include bp(bp-md) {
-    top: 10px;
-    font-size: 16px;
+    top: 17px;
+    font-size: 23px;
     left: 240px;
+    font-weight: 300;
   }
 }
 

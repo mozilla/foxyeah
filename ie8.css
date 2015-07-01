@@ -81,3 +81,16 @@ h1 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000,endColorstr=#90000000);
   zoom: 1;
 }
+
+.welcome-banner {
+  width: 600px;
+  height: 335px;
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  top: 150px;
+}
+
+.welcome-banner h1 {
+  margin-left: 152px;
+}
